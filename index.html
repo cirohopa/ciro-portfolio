@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciro Henrique Oliveira — Desenvolvedor Fullstack</title>
+    <meta name="description" content="Portfólio de Ciro Henrique Oliveira, Desenvolvedor Fullstack especialista em APIs REST com Java, Spring Boot e ecossistemas robustos.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Kanit:ital,wght@1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#home">CIRO HENRIQUE</a>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#projetos">Projetos</a>
+                <a href="#experiencia">Experiência</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#formacao">Formação</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                <i data-lucide="sun" id="theme-icon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-greeting">Olá, meu nome é</span>
+                    <h1 class="hero-title">Ciro Henrique Oliveira</h1>
+                    <h2 class="hero-subtitle">Desenvolvedor Fullstack</h2>
+                    <p class="hero-tagline">Estudante de Engenharia de Software focando em ecossistemas robustos.</p>
+                    <p class="hero-description">
+                        Especialista na construção de APIs REST com Java e Spring Boot. Focado em arquitetura de microsserviços, princípios SOLID e automação de processos para garantir a integridade e estabilidade em ambientes de produção.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+                        <a href="#contato" class="btn btn-secondary">Entrar em Contato</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-background-glow"></div>
+        </section>
+
+        <!-- Experiência Profissional -->
+        <section id="experiencia" class="experience section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Experiência Profissional</h2>
+                </div>
+                
+                <div class="timeline">
+                    <!-- Card 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="card experience-card">
+                            <div class="card-header">
+                                <h3>Toda Inc</h3>
+                                <span class="badge">Set 2025 – Abr 2026</span>
+                            </div>
+                            <h4 class="role">Estagiário de TI (Desenvolvimento Fullstack)</h4>
+                            <ul class="experience-list">
+                                <li>Correção de incidentes críticos em tempo de produção, mitigando ativamente riscos de perdas financeiras para o negócio.</li>
+                                <li>Otimização e manutenção de fluxos de automação (n8n, Python, JavaScript) integrados a APIs REST, prevenindo falhas sistêmicas futuras e garantindo a integridade de dados no PostgreSQL.</li>
+                                <li>Otimização e desenvolvimento da interface responsiva do Sistema de Aferição de Obras (SAO) utilizando Flutter e web, elevando drasticamente a usabilidade e a experiência do usuário final.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="card experience-card">
+                            <div class="card-header">
+                                <h3>TRE-GO</h3>
+                                <span class="badge">Jul 2024 – Set 2025</span>
+                            </div>
+                            <h4 class="role">Estagiário de Suporte de Microinformática</h4>
+                            <ul class="experience-list">
+                                <li>Atendimento ágil e resolução de problemas técnicos de hardware e software, garantindo a continuidade operacional dos usuários do tribunal.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades Técnicas -->
+        <section id="habilidades" class="skills section alternate-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Habilidades Técnicas</h2>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category card">
+                        <div class="skill-icon"><i data-lucide="code-2"></i></div>
+                        <h3>Linguagens</h3>
+                        <div class="tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Dart (Flutter)</span>
+                            <span class="tag">SQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category card">
+                        <div class="skill-icon"><i data-lucide="server"></i></div>
+                        <h3>Frameworks & Infra</h3>
+                        <div class="tags">
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Azure Cloud</span>
+                            <span class="tag">Git/GitHub</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category card">
+                        <div class="skill-icon"><i data-lucide="git-merge"></i></div>
+                        <h3>Engenharia & Arquitetura</h3>
+                        <div class="tags">
+                            <span class="tag">APIs REST</span>
+                            <span class="tag">Padrão MVC</span>
+                            <span class="tag">Princípios SOLID</span>
+                            <span class="tag">Código Limpo</span>
+                            <span class="tag">CI/CD</span>
+                            <span class="tag">Automação (n8n)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category card">
+                        <div class="skill-icon"><i data-lucide="cpu"></i></div>
+                        <h3>Inteligência Artificial</h3>
+                        <div class="tags">
+                            <span class="tag">Integração de LLMs</span>
+                            <span class="tag">Spring AI</span>
+                            <span class="tag">GitHub Copilot</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formação Acadêmica -->
+        <section id="formacao" class="education section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Formação Acadêmica e Capacitação</h2>
+                </div>
+                
+                <div class="education-grid">
+                    <div class="card education-card">
+                        <div class="education-icon"><i data-lucide="graduation-cap"></i></div>
+                        <div class="education-content">
+                            <h3>Engenharia de Software</h3>
+                            <h4 class="institution">UniGoiás</h4>
+                            <span class="year">2023 – 2026</span>
+                        </div>
+                    </div>
+
+                    <div class="card education-card">
+                        <div class="education-icon"><i data-lucide="award"></i></div>
+                        <div class="education-content">
+                            <h3>Bootcamp Backend Java com Spring AI</h3>
+                            <h4 class="institution">NTT DATA</h4>
+                            <p class="education-desc">Foco em Cloud Azure e Machine Learning.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos -->
+        <section id="projetos" class="projects section alternate-bg">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Projetos em Destaque</h2>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Placeholder Card -->
+                    <div class="card project-card placeholder-card">
+                        <div class="project-content">
+                            <div class="project-icon-wrapper">
+                                <i data-lucide="timer" class="spin-slow"></i>
+                            </div>
+                            <h3>Em Documentação</h3>
+                            <p>Estudos de caso detalhando a arquitetura de integrações CRM e APIs inteligentes com Spring Boot em fase final de documentação.</p>
+                        </div>
+                        <div class="project-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer / Contato -->
+    <footer id="contato" class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <h2>Vamos Conversar?</h2>
+                <p>Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades de visão de futuro.</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://linkedin.com/in/ciro-henrique" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                    <i data-lucide="linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/cirohopa" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+                    <i data-lucide="github"></i>
+                    <span>GitHub</span>
+                </a>
+                <a href="mailto:cirohopa@gmail.com" class="social-btn" aria-label="E-mail">
+                    <i data-lucide="mail"></i>
+                    <span>E-mail</span>
+                </a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ciro Henrique Oliveira. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lucide Icons Script -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
