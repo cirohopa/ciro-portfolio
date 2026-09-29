@@ -3,210 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ciro Henrique Oliveira — Desenvolvedor Fullstack</title>
-    <meta name="description" content="Portfólio de Ciro Henrique Oliveira, Desenvolvedor Fullstack especialista em APIs REST com Java, Spring Boot e ecossistemas robustos.">
+    <title>Ciro Henrique — Engenheiro de Software</title>
+    <meta name="description" content="Portfólio de Ciro Henrique, Engenheiro de Software Jr. com foco em Java, Spring Boot e Azure.">
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Kanit:ital,wght@1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header & Navigation -->
+    <!-- Background Patterns -->
+    <div class="bg-pattern dots-pattern" aria-hidden="true"></div>
+    <div class="bg-pattern topo-pattern" aria-hidden="true">
+        <svg viewBox="0 0 1400 1000" preserveAspectRatio="none">
+            <path class="topo-line" d="M-100,300 C200,400 400,100 800,350 S1100,200 1500,400" />
+            <path class="topo-line" d="M-50,350 C250,450 450,150 850,400 S1150,250 1550,450" />
+            <path class="topo-line" d="M-150,250 C150,350 350,50 750,300 S1050,150 1450,350" />
+            <path class="topo-line" d="M-200,200 C100,300 300,0 700,250 S1000,100 1400,300" />
+            <path class="topo-line" d="M-80,450 C220,550 420,250 820,500 S1120,350 1520,550" />
+        </svg>
+    </div>
+    <div class="bg-pattern network-pattern" aria-hidden="true">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+            <!-- Conexões -->
+            <path class="net-line" d="M150,200 L300,150 L450,300 L350,450 Z" />
+            <path class="net-line" d="M450,300 L700,250 L850,400 L650,550 L350,450" />
+            <path class="net-line" d="M700,250 L900,150" />
+            <path class="net-line" d="M850,400 L950,500" />
+            <path class="net-line" d="M300,150 L400,50" />
+            <!-- Nós -->
+            <circle class="net-node" cx="150" cy="200" r="2.5" />
+            <circle class="net-node" cx="300" cy="150" r="3" />
+            <circle class="net-node" cx="450" cy="300" r="2.5" />
+            <circle class="net-node" cx="350" cy="450" r="3" />
+            <circle class="net-node" cx="700" cy="250" r="4" />
+            <circle class="net-node" cx="850" cy="400" r="3" />
+            <circle class="net-node" cx="650" cy="550" r="2.5" />
+            <circle class="net-node" cx="900" cy="150" r="2" />
+            <circle class="net-node" cx="950" cy="500" r="2.5" />
+            <circle class="net-node" cx="400" cy="50" r="2" />
+        </svg>
+    </div>
+    <div class="bg-glow"></div>
+
+    <!-- Header -->
     <header class="header">
         <div class="container header-container">
             <div class="logo">
-                <a href="#home">CIRO HENRIQUE</a>
+                <a href="#home" aria-label="Ciro Henrique">
+                    <span class="logo-text">CIRO<span class="text-primary">.</span></span>
+                </a>
             </div>
             
             <nav class="nav-links">
                 <a href="#projetos">Projetos</a>
                 <a href="#experiencia">Experiência</a>
-                <a href="#habilidades">Habilidades</a>
+                <a href="#stack">Stack</a>
                 <a href="#formacao">Formação</a>
                 <a href="#contato">Contato</a>
             </nav>
 
-            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
-                <i data-lucide="sun" id="theme-icon"></i>
+            <button class="mobile-menu-btn" aria-label="Abrir menu">
+                <i data-lucide="menu"></i>
             </button>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="hero">
+        <section id="home" class="hero section">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <span class="hero-greeting">Olá, meu nome é</span>
-                    <h1 class="hero-title">Ciro Henrique Oliveira</h1>
-                    <h2 class="hero-subtitle">Desenvolvedor Fullstack</h2>
-                    <p class="hero-tagline">Estudante de Engenharia de Software focando em ecossistemas robustos.</p>
+                    <h1 class="hero-title">CIRO HENRIQUE</h1>
+                    <h2 class="hero-subtitle">Engenheiro de Software Jr.</h2>
+                    <p class="hero-techs">Java <span class="dot">·</span> Spring Boot <span class="dot">·</span> Azure <span class="dot">·</span> PostgreSQL <span class="dot">·</span> Python</p>
+                    
                     <p class="hero-description">
-                        Especialista na construção de APIs REST com Java e Spring Boot. Focado em arquitetura de microsserviços, princípios SOLID e automação de processos para garantir a integridade e estabilidade em ambientes de produção.
+                        Construindo sistemas, APIs e soluções de software com foco em qualidade, arquitetura e evolução contínua.
                     </p>
+                    
                     <div class="hero-actions">
-                        <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
-                        <a href="#contato" class="btn btn-secondary">Entrar em Contato</a>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-background-glow"></div>
-        </section>
-
-        <!-- Experiência Profissional -->
-        <section id="experiencia" class="experience section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Experiência Profissional</h2>
-                </div>
-                
-                <div class="timeline">
-                    <!-- Card 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="card experience-card">
-                            <div class="card-header">
-                                <h3>Toda Inc</h3>
-                                <span class="badge">Set 2025 – Abr 2026</span>
-                            </div>
-                            <h4 class="role">Estagiário de TI (Desenvolvimento Fullstack)</h4>
-                            <ul class="experience-list">
-                                <li>Correção de incidentes críticos em tempo de produção, mitigando ativamente riscos de perdas financeiras para o negócio.</li>
-                                <li>Otimização e manutenção de fluxos de automação (n8n, Python, JavaScript) integrados a APIs REST, prevenindo falhas sistêmicas futuras e garantindo a integridade de dados no PostgreSQL.</li>
-                                <li>Otimização e desenvolvimento da interface responsiva do Sistema de Aferição de Obras (SAO) utilizando Flutter e web, elevando drasticamente a usabilidade e a experiência do usuário final.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="card experience-card">
-                            <div class="card-header">
-                                <h3>TRE-GO</h3>
-                                <span class="badge">Jul 2024 – Set 2025</span>
-                            </div>
-                            <h4 class="role">Estagiário de Suporte de Microinformática</h4>
-                            <ul class="experience-list">
-                                <li>Atendimento ágil e resolução de problemas técnicos de hardware e software, garantindo a continuidade operacional dos usuários do tribunal.</li>
-                            </ul>
-                        </div>
+                        <a href="#projetos" class="btn btn-primary">VER PROJETOS</a>
+                        <a href="https://github.com/cirohopa" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            GITHUB <i data-lucide="arrow-up-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Habilidades Técnicas -->
-        <section id="habilidades" class="skills section alternate-bg">
+        <!-- Projetos Section -->
+        <section id="projetos" class="projects section">
             <div class="container">
                 <div class="section-header">
-                    <h2>Habilidades Técnicas</h2>
-                </div>
-                
-                <div class="skills-grid">
-                    <div class="skill-category card">
-                        <div class="skill-icon"><i data-lucide="code-2"></i></div>
-                        <h3>Linguagens</h3>
-                        <div class="tags">
-                            <span class="tag">Java</span>
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Dart (Flutter)</span>
-                            <span class="tag">SQL</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category card">
-                        <div class="skill-icon"><i data-lucide="server"></i></div>
-                        <h3>Frameworks & Infra</h3>
-                        <div class="tags">
-                            <span class="tag">Spring Boot</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">Azure Cloud</span>
-                            <span class="tag">Git/GitHub</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category card">
-                        <div class="skill-icon"><i data-lucide="git-merge"></i></div>
-                        <h3>Engenharia & Arquitetura</h3>
-                        <div class="tags">
-                            <span class="tag">APIs REST</span>
-                            <span class="tag">Padrão MVC</span>
-                            <span class="tag">Princípios SOLID</span>
-                            <span class="tag">Código Limpo</span>
-                            <span class="tag">CI/CD</span>
-                            <span class="tag">Automação (n8n)</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-category card">
-                        <div class="skill-icon"><i data-lucide="cpu"></i></div>
-                        <h3>Inteligência Artificial</h3>
-                        <div class="tags">
-                            <span class="tag">Integração de LLMs</span>
-                            <span class="tag">Spring AI</span>
-                            <span class="tag">GitHub Copilot</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Formação Acadêmica -->
-        <section id="formacao" class="education section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Formação Acadêmica e Capacitação</h2>
-                </div>
-                
-                <div class="education-grid">
-                    <div class="card education-card">
-                        <div class="education-icon"><i data-lucide="graduation-cap"></i></div>
-                        <div class="education-content">
-                            <h3>Engenharia de Software</h3>
-                            <h4 class="institution">UniGoiás</h4>
-                            <span class="year">2023 – 2026</span>
-                        </div>
-                    </div>
-
-                    <div class="card education-card">
-                        <div class="education-icon"><i data-lucide="award"></i></div>
-                        <div class="education-content">
-                            <h3>Bootcamp Backend Java com Spring AI</h3>
-                            <h4 class="institution">NTT DATA</h4>
-                            <p class="education-desc">Foco em Cloud Azure e Machine Learning.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projetos -->
-        <section id="projetos" class="projects section alternate-bg">
-            <div class="container">
-                <div class="section-header">
+                    <span class="section-label">01 // TRABALHO</span>
                     <h2>Projetos em Destaque</h2>
                 </div>
                 
                 <div class="projects-grid">
-                    <!-- Placeholder Card -->
-                    <div class="card project-card placeholder-card">
-                        <div class="project-content">
-                            <div class="project-icon-wrapper">
-                                <i data-lucide="timer" class="spin-slow"></i>
+                    <!-- Supportbox -->
+                    <a href="https://github.com/cirohopa" target="_blank" rel="noopener noreferrer" class="card project-card">
+                        <div class="project-header">
+                            <span class="project-number">01</span>
+                            <div class="project-links">
+                                <i data-lucide="github"></i>
+                                <i data-lucide="external-link"></i>
                             </div>
-                            <h3>Em Documentação</h3>
-                            <p>Estudos de caso detalhando a arquitetura de integrações CRM e APIs inteligentes com Spring Boot em fase final de documentação.</p>
                         </div>
-                        <div class="project-glow"></div>
+                        <div class="project-content">
+                            <h3>SUPPORTBOX</h3>
+                            <p class="project-desc">Sistema de gerenciamento de chamados.</p>
+                            <div class="project-tech">
+                                <span>Node.js</span>
+                                <span>PostgreSQL</span>
+                                <span>REST API</span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Documentação -->
+                    <a href="https://github.com/cirohopa" target="_blank" rel="noopener noreferrer" class="card project-card">
+                        <div class="project-header">
+                            <span class="project-number">02</span>
+                            <div class="project-links">
+                                <i data-lucide="github"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>EM DOCUMENTAÇÃO</h3>
+                            <p class="project-desc">Estudos de caso detalhando a arquitetura de integrações CRM e APIs inteligentes com Spring Boot em fase final de documentação.</p>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>Spring Boot</span>
+                                <span>Arquitetura</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiência Section -->
+        <section id="experiencia" class="experience section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">02 // CARREIRA</span>
+                    <h2>Experiência Profissional</h2>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-progress-bar">
+                        <div class="timeline-progress-fill"></div>
+                    </div>
+                    <!-- Toda Inc -->
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-content card">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Set 2025 – Abr 2026</span>
+                                <h3>TODA INC</h3>
+                            </div>
+                            <h4 class="timeline-role">Estagiário de TI (Desenvolvimento Fullstack)</h4>
+                            <p class="timeline-desc">
+                                Correção de incidentes críticos em tempo de produção, mitigando ativamente riscos de perdas financeiras. Otimização e manutenção de fluxos de automação (n8n, Python, JavaScript) integrados a APIs REST e PostgreSQL. Desenvolvimento da interface responsiva do Sistema de Aferição de Obras (SAO) utilizando Flutter e web.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- TRE-GO -->
+                    <div class="timeline-item">
+                        <div class="timeline-node"></div>
+                        <div class="timeline-content card">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Jul 2024 – Set 2025</span>
+                                <h3>TRE-GO</h3>
+                            </div>
+                            <h4 class="timeline-role">Estagiário de Suporte de Microinformática</h4>
+                            <p class="timeline-desc">
+                                Atendimento ágil e resolução de problemas técnicos de hardware e software, garantindo a continuidade operacional dos usuários do tribunal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stack Section -->
+        <section id="stack" class="stack section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">03 // TECNOLOGIAS</span>
+                    <h2>Stack & Ferramentas</h2>
+                </div>
+                
+                <div class="stack-grid">
+                    <div class="stack-category card">
+                        <h3>BACKEND</h3>
+                        <div class="stack-list">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>Node.js</span>
+                            <span>TypeScript</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stack-category card">
+                        <h3>DATABASE</h3>
+                        <div class="stack-list">
+                            <span>PostgreSQL</span>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stack-category card">
+                        <h3>CLOUD / DEVOPS</h3>
+                        <div class="stack-list">
+                            <span>Azure</span>
+                            <span>Docker</span>
+                            <span>Git/GitHub</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stack-category card">
+                        <h3>AUTOMAÇÃO</h3>
+                        <div class="stack-list">
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>n8n</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stack-category card">
+                        <h3>INTELIGÊNCIA ARTIFICIAL</h3>
+                        <div class="stack-list">
+                            <span>Integração de LLMs</span>
+                            <span>Spring AI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formação Section -->
+        <section id="formacao" class="education section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">04 // ACADÊMICO</span>
+                    <h2>Formação</h2>
+                </div>
+                
+                <div class="education-grid">
+                    <div class="card education-card">
+                        <div class="edu-header">
+                            <h3>Engenharia de Software</h3>
+                            <span class="edu-date">2023 – 2026</span>
+                        </div>
+                        <h4 class="edu-inst">UniGoiás</h4>
+                    </div>
+
+                    <div class="card education-card">
+                        <div class="edu-header">
+                            <h3>Bootcamp Backend Java com Spring AI</h3>
+                            <span class="edu-date">Concluído</span>
+                        </div>
+                        <h4 class="edu-inst">NTT DATA</h4>
+                        <p class="edu-desc">Foco em Cloud Azure e Machine Learning.</p>
                     </div>
                 </div>
             </div>
@@ -214,41 +276,32 @@
     </main>
 
     <!-- Footer / Contato -->
-    <footer id="contato" class="footer">
+    <footer id="contato" class="footer section">
         <div class="container footer-container">
-            <div class="footer-info">
-                <h2>Vamos Conversar?</h2>
+            <div class="footer-content">
+                <h2>Vamos construir algo?</h2>
                 <p>Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades de visão de futuro.</p>
+                
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/ciro-henrique" target="_blank" rel="noopener noreferrer" class="social-btn">
+                        <i data-lucide="linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/cirohopa" target="_blank" rel="noopener noreferrer" class="social-btn">
+                        <i data-lucide="github"></i> GitHub
+                    </a>
+                    <a href="mailto:cirohopa@gmail.com" class="social-btn">
+                        <i data-lucide="mail"></i> E-mail
+                    </a>
+                </div>
             </div>
-            
-            <div class="social-links">
-                <a href="https://linkedin.com/in/ciro-henrique" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
-                    <i data-lucide="linkedin"></i>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="https://github.com/cirohopa" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
-                    <i data-lucide="github"></i>
-                    <span>GitHub</span>
-                </a>
-                <a href="mailto:cirohopa@gmail.com" class="social-btn" aria-label="E-mail">
-                    <i data-lucide="mail"></i>
-                    <span>E-mail</span>
-                </a>
-            </div>
-            
             <div class="footer-bottom">
                 <p>&copy; 2026 Ciro Henrique Oliveira. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Lucide Icons Script -->
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        lucide.createIcons();
-    </script>
-    
-    <!-- Custom Script -->
     <script src="script.js"></script>
 </body>
 </html>
