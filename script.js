@@ -21,49 +21,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Mobile Menu Toggle Logic (Simples para visibilidade)
+    // Mobile navigation drawer
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
+    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+    const mobileViewport = window.matchMedia('(max-width: 768px)');
 
-    if (mobileMenuBtn && navLinks) {
+    if (mobileMenuBtn && navLinks && mobileMenuOverlay) {
+        const setMenuOpen = (isOpen, returnFocus = false) => {
+            navLinks.classList.toggle('is-open', isOpen);
+            mobileMenuOverlay.hidden = !isOpen;
+            mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+            mobileMenuBtn.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+            mobileMenuBtn.innerHTML = `<i data-lucide="${isOpen ? 'x' : 'menu'}"></i>`;
+            lucide.createIcons();
+
+            if (returnFocus) mobileMenuBtn.focus();
+        };
+
         mobileMenuBtn.addEventListener('click', () => {
-            const isDisplayed = window.getComputedStyle(navLinks).display !== 'none';
-            if (isDisplayed) {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '80px';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.backgroundColor = 'rgba(5, 7, 7, 0.95)';
-                navLinks.style.padding = '2rem';
-                navLinks.style.borderBottom = '1px solid var(--border)';
+            setMenuOpen(mobileMenuBtn.getAttribute('aria-expanded') !== 'true');
+            if (mobileMenuBtn.getAttribute('aria-expanded') === 'true') {
+                navLinks.querySelector('a').focus();
             }
         });
 
-        // Fechar menu ao clicar em um link
+        mobileMenuOverlay.addEventListener('click', () => setMenuOpen(false, true));
+
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    navLinks.style.display = 'none';
-                }
+                navLinks.querySelectorAll('a').forEach(navLink => {
+                    navLink.removeAttribute('aria-current');
+                });
+                link.setAttribute('aria-current', 'location');
+                link.classList.remove('is-flashing');
+                void link.offsetWidth;
+                link.classList.add('is-flashing');
+
+                if (mobileViewport.matches) setMenuOpen(false, true);
             });
         });
-        
-        // Resetar estilo ao redimensionar tela
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'row';
-                navLinks.style.position = 'static';
-                navLinks.style.backgroundColor = 'transparent';
-                navLinks.style.padding = '0';
-                navLinks.style.borderBottom = 'none';
-            } else {
-                navLinks.style.display = 'none';
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && mobileMenuBtn.getAttribute('aria-expanded') === 'true') {
+                setMenuOpen(false, true);
             }
+        });
+
+        mobileViewport.addEventListener('change', event => {
+            if (!event.matches) setMenuOpen(false);
         });
     }
 
@@ -95,6 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
             el.style.transition = 'opacity 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)';
             observer.observe(el);
         });
+    }
+
     // Timeline Progress Logic
     const timelineSection = document.querySelector('.experience.section');
     const timelineProgressBar = document.querySelector('.timeline-progress-fill');
